@@ -1,8 +1,8 @@
 {
   "name": "@anonymitybot/is-educational-email-domain",
   "version": "1.0.0",
-  "description": "Check if a domain has an educational TLD or SLD",
-  "main": "dist/index.js",
+  "description": "Check if an email domain belongs to an educational instutition",
+  "main": "dist/main.js",
   "repository": "git@github.com:AnonymityBot/educational-tlds.git",
   "author": "Sagi Kedmi <git@sagi.io>",
   "license": "MIT",
