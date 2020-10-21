@@ -5,7 +5,7 @@
   "main": "dist/main.js",
   "repository": "git@github.com:AnonymityBot/educational-tlds.git",
   "author": "Sagi Kedmi <git@sagi.io>",
-  "license": "MIT",
+  "license": "AGPL-3.0-only",
   "private": false,
   "scripts": {
     "test": "yarn jest"
