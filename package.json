@@ -3,16 +3,23 @@
   "version": "1.0.0",
   "description": "Check if an email domain belongs to an educational instutition",
   "main": "dist/main.js",
-  "repository": "git@github.com:AnonymityBot/educational-tlds.git",
+  "repository": "git@github.com:AnonymityBot/is-educational-email-domain.git",
   "author": "Sagi Kedmi <git@sagi.io>",
+  "homepage": "https://anonymitybot.com",
   "license": "AGPL-3.0-only",
   "private": false,
   "scripts": {
     "build": "yarn webpack",
-    "test": "yarn build && DEBUG=is-educational-email-domain yarn jest"
+    "test": "yarn build && DEBUG=is-educational-email-domain yarn jest",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "prettier:ci": "prettier --list-different ./src/*.js",
+    "lint": "yarn eslint ./src"
   },
   "devDependencies": {
+    "coveralls": "^3.1.0",
     "debug": "^4.2.0",
+    "eslint": "^7.11.0",
+    "eslint-plugin-jest": "^24.1.0",
     "jest": "^26.6.0",
     "prettier": "^2.1.2",
     "webpack": "^5.1.3",

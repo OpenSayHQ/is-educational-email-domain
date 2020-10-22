@@ -4,8 +4,6 @@ const {
   hasCommonEducationalTld,
 } = require('./');
 
-const main = require('../dist/main');
-
 describe('is-educational-email-domain', () => {
   test('hasCommonEducationalTld', () => {
     expect(hasCommonEducationalTld('stanford.edu')).toBe(true);
@@ -36,8 +34,5 @@ describe('is-educational-email-domain', () => {
     expect(isEducationalEmailDomain('stanford.edu')).toBe(true);
     expect(isEducationalEmailDomain('ifi.uio.no')).toBe(true);
     expect(isEducationalEmailDomain('vaniercollege.qc.ca')).toBe(true);
-
-    expect(main.isEducationalEmailDomain('stanford.edu')).toBe(true);
-    expect(main.hasCommonEducationalTld('bla.ac')).toBe(false);
   });
 });

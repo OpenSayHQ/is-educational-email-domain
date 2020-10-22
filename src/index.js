@@ -9,22 +9,18 @@ const validKnownEducationalEmailDomainSet = new Set(
 );
 
 const checkDomainTldInSet = (domain, tldSet) => {
-  try {
-    const dotSeparated = domain.split('.');
-    const nrLabels = dotSeparated.length;
+  const dotSeparated = domain.split('.');
+  const nrLabels = dotSeparated.length;
 
-    for (let i = nrLabels - 1; i >= 0; i--) {
-      const dotLabels = dotSeparated.slice(i).join('.');
-      debug({ domain, nrLabels, dotLabels });
-      if (tldSet.has(dotLabels)) {
-        return true;
-      }
+  for (let i = nrLabels - 1; i >= 0; i--) {
+    const dotLabels = dotSeparated.slice(i).join('.');
+    debug({ domain, nrLabels, dotLabels });
+    if (tldSet.has(dotLabels)) {
+      return true;
     }
-
-    return false;
-  } catch (e) {
-    throw new Error(`Couldn't parse ${domain} - probably not a valid domain.`);
   }
+
+  return false;
 };
 const hasCommonEducationalTld = (domain) =>
   checkDomainTldInSet(domain, commonEducationalTldSet);

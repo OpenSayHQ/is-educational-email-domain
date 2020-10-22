@@ -1,6 +1,13 @@
 # is-educational-email-domain
 
-Check if an email domain belongs to an educational institutions.
+[`@anonymitybot/is-educational-email-domain`](https://www.npmjs.com/package/@anonymitybot/is-educational-email-domain)
+allows you to check if an email domain belongs to an educational institution.
+
+[![CircleCI](https://circleci.com/gh/anonymitybot/is-educational-email-domain.svg?style=svg&circle-token=c5ae7a8993d47db9ca08a628614585ca45c75f33)](https://circleci.com/gh/sagi/workers-kv)
+[![Coverage Status](https://coveralls.io/repos/github/AnonymityBot/is-educational-email-domain/badge.svg?branch=master)](https://coveralls.io/github/AnonymityBot/is-educational-email-domain?branch=master)
+[![version](https://img.shields.io/npm/v/@anonymitybot/is-educational-email-domain.svg?style=flat-square)](http://npm.im/@anonymitybot/is-educational-email-domain)
+
+
 
 ## Why?
 
