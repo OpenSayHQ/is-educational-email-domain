@@ -1,13 +1,14 @@
 {
   "name": "@anonymitybot/is-educational-email-domain",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Check if an email domain belongs to an educational instutition",
   "main": "dist/main.js",
-  "repository": "git@github.com:AnonymityBot/is-educational-email-domain.git",
   "author": "Sagi Kedmi <git@sagi.io>",
-  "homepage": "https://github.com/anonymitybot/is-educational-email-domain",
   "license": "AGPL-3.0-only",
   "private": false,
+  "homepage": "https://anonymitybot.com",
+  "repository": "https://github.com/AnonymityBot/is-educational-email-domain.git",
+  "keywords": ["educational", "email", "domain", "check", "anonymitybot"],
   "scripts": {
     "build": "yarn webpack",
     "prepublish": "yarn build && yarn test",
