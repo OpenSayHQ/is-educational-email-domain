@@ -21,16 +21,36 @@ See [fetch_common_educational_tlds_and_slds.sh](https://github.com/anonymitybot/
 Some institutions don't use `edu` or `ac` TLDs, and (usually) use their own
 country code. For instance, [University of Oslo](https://uio.no) has an email
 domain for each department - `math.uio.no`, `fys.uio.no` - in order to capture
-all such departments we simply add `uio.no` to the ad-hoc TLD list.
+all such departments we check for `uio.no`.
 
-### **`hasKnownEducationalEmailDomain(domain)`**University of has an email domaintheir own that indicate
 
 ### **`isEducationalEmailDomain(domain)`**
-```js
-const {}
-```
 
 ## Example
+
+```js
+const {
+  isEducationalEmailDomain,
+  hasAdhocEducationalTld,
+  hasCommonEducationalTld,
+} = require('@anonymitybot/is-educational.');
+
+  hasCommonEducationalTld('stanford.edu'); // true
+  hasCommonEducationalTld('u-tokyo.ac.jp'); // true
+  hasCommonEducationalTld('cuhk.edu.cn'); // true
+
+  hasCommonEducationalTld('bla.cc'); // false - .ac is a ccTLD
+
+  hasAdhocEducationalTld('math.ethz.cz'); // true - etch.cz is an ad-hoc educational domain
+  hasAdhocEducationalTld('stanford.edu'); // false - .edu is a common educational tld (but not an ad-hoc one)
+
+  isEducationalEmailDomain('stanford.edu'); // true
+  isEducationalEmailDomain('math.ethz.cz'); // true
+
+  isEducationalEmailDomain('bla.cc'); // false - .ac is a ccTLD
+
+```
+
 
 Install with `yarn add @anonymitybot/is-educational-email-domain`
 
