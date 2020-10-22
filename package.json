@@ -1,6 +1,6 @@
 {
   "name": "@anonymitybot/is-educational-email-domain",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Check if an email domain belongs to an educational instutition",
   "main": "dist/main.js",
   "author": "Sagi Kedmi <git@sagi.io>",
