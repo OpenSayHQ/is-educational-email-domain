@@ -5,7 +5,7 @@ Check if an email domain belongs to an educational institutions.
 ## Why?
 
 We offer [AnonymityBot](https://anonymitybot.com) for **free** for educational
-purposes but couldn't find a complete list email domains of educational institutions.
+purposes but couldn't find a complete list of email domains of educational institutions.
 
 ## API
 
@@ -21,20 +21,31 @@ See [fetch_common_educational_tlds_and_slds.sh](https://github.com/anonymitybot/
 Some institutions don't use `edu` or `ac` TLDs, and (usually) use their own
 country code. For instance, [University of Oslo](https://uio.no) has an email
 domain for each department - `math.uio.no`, `fys.uio.no` - in order to capture
-all such departments we check for `uio.no`.
+all such departments we simply check for `uio.no`.
 
 
 ### **`isEducationalEmailDomain(domain)`**
 
+Combines `hasCommonEducationalTld` and `hasAdhocEducationalTld`:
+
+```js
+const isEducationalEmailDomain = (domain) =>
+  hasCommonEducationalTld(domain) || hasAdhocEducationalTld(domain);
+```
+
+
 ## Example
+
+Install with `yarn add @anonymitybot/is-educational-email-domain`:
 
 ```js
 const {
   isEducationalEmailDomain,
   hasAdhocEducationalTld,
   hasCommonEducationalTld,
-} = require('@anonymitybot/is-educational.');
+} = require('@anonymitybot/is-educational-email-domain');
 
+(async () => {
   hasCommonEducationalTld('stanford.edu'); // true
   hasCommonEducationalTld('u-tokyo.ac.jp'); // true
   hasCommonEducationalTld('cuhk.edu.cn'); // true
@@ -48,11 +59,9 @@ const {
   isEducationalEmailDomain('math.ethz.cz'); // true
 
   isEducationalEmailDomain('bla.cc'); // false - .ac is a ccTLD
+})()
 
-```
 
-
-Install with `yarn add @anonymitybot/is-educational-email-domain`
 
 
 ## Data
