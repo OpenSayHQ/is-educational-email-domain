@@ -10,7 +10,8 @@
   "private": false,
   "scripts": {
     "build": "yarn webpack",
-    "test": "yarn build && DEBUG=is-educational-email-domain yarn jest",
+    "prepublish": "yarn build && yarn test",
+    "test": "DEBUG=is-educational-email-domain yarn jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "prettier:ci": "prettier --list-different ./src/*.js",
     "lint": "yarn eslint ./src"
