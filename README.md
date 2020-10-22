@@ -14,7 +14,6 @@ purposes but couldn't find a complete list of email domains of educational insti
 We call a TLD `Common Educational TLD` if it is either `.edu`, `.edu.xx` or
 `.ac.xx` and was fetched from
 [publicsuffix.org](ttps://publicsuffix.org/list/public_suffix_list.dat).
-See [fetch_common_educational_tlds_and_slds.sh](https://github.com/anonymitybot/is-educational-email-domain/blob/master/assets/fetch_common_educational_tlds_and_slds.sh)
 
 ### **`hasAdhocEducationalTld(domain)`**
 
@@ -33,6 +32,9 @@ const isEducationalEmailDomain = (domain) =>
   hasCommonEducationalTld(domain) || hasAdhocEducationalTld(domain);
 ```
 
+### Where is the data is coming from?
+
+See [./assets]('./assets').
 
 ## Example
 
