@@ -34,7 +34,7 @@ const isEducationalEmailDomain = (domain) =>
 
 ### Where is the data is coming from?
 
-See [./assets]('./assets').
+See [./assets](assets).
 
 ## Example
 
@@ -62,8 +62,4 @@ const {
 
   isEducationalEmailDomain('bla.cc'); // false - .ac is a ccTLD
 })()
-
-
-
-
-## Data
+```
