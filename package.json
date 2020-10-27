@@ -1,6 +1,6 @@
 {
   "name": "@anonymitybot/is-educational-email-domain",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Check if an email domain belongs to an educational instutition",
   "main": "dist/main.js",
   "author": "Sagi Kedmi <git@sagi.io>",
@@ -12,7 +12,7 @@
   "scripts": {
     "build": "yarn webpack",
     "prepublish": "yarn build && yarn test",
-    "test": "DEBUG=is-educational-email-domain yarn jest",
+    "test": "yarn jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "prettier:ci": "prettier --list-different ./src/*.js",
     "lint": "yarn eslint ./src"
