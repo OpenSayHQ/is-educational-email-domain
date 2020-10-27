@@ -1,6 +1,6 @@
 module.exports = () => {
   return {
-    target: 'web',
+    target: 'node',
     mode: 'production',
     output: { libraryTarget: 'umd' },
   };

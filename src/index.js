@@ -1,5 +1,3 @@
-const debug = require('debug')('is-educational-email-domain');
-
 const commonEducationalTldSet = new Set(
   require('../assets/common_educational_tlds_and_slds.json')
 );
@@ -14,7 +12,6 @@ const checkDomainTldInSet = (domain, tldSet) => {
 
   for (let i = nrLabels - 1; i >= 0; i--) {
     const dotLabels = dotSeparated.slice(i).join('.');
-    debug({ domain, nrLabels, dotLabels });
     if (tldSet.has(dotLabels)) {
       return true;
     }
