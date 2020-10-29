@@ -10,8 +10,22 @@ Check if an email domain belongs to an educational institution.
 
 ## Why?
 
-We offer [AnonymityBot](https://anonymitybot.com) for **free** for educational
-purposes but couldn't find a complete list of email domains of educational institutions.
+We offer [AnonymityBot](https://anonymitybot.com) for **free** for educational workspaces but couldn't find an
+efficient way to detect email domains of educational institutions.
+
+
+###  Why Open Source?
+
+>> We’ve been students and lecturers ourselves and personally felt the
+>> communicational hardships affecting both sides (the fear of being ridiculed for
+>> asking a question, the moment no one asks questions - not knowing if they got
+>> it, etc.) and therefore think that more software should offer Pro Bono tiers
+>> for educational purposes.
+
+>> For this reason, we decided to open source our software that automatically
+>> detects if an email domain belongs to an educational institution.
+
+You can [read more here](https://anonymitybot.com/blog/automatically-free-for-educational-workspaces/).
 
 ## API
 
